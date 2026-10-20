@@ -1,5 +1,7 @@
 export type Role = 'student' | 'parent';
 export type Game = 'guess' | 'predict' | 'triage';
+export type SessionMode = 'all' | Game;
+export const sessionModes:SessionMode[]=['all','guess','predict','triage'];
 export type Prompt = {id:string; game:Game; title:string; text:string; choices?:string[]; parents?:string[]; cue?:string; reflection:string; sensitive?:boolean};
 export const fields=['Health or medicine','Engineering or technology','Business or finance','Arts, design, or media','Humanities or social sciences','Education or public service','Undecided','Other'];
 export const interests=['Art or design','Music or performance','Writing or storytelling','Sports or fitness','Gaming or technology','Community work','Building or making','Something else'];

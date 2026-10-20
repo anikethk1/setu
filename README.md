@@ -7,7 +7,7 @@ A playable React/Vinext app based on the supplied Setu proposal. Anonymous room-
 - Real multiplayer rooms backed by Cloudflare D1, with conflict-safe updates and two-second synchronization.
 - Host-controlled lobby and session phases; optional participation by the host.
 - Student/parent quizzes, career-field personalization, and unanimous opt-in for hypothetical mental health topics.
-- Quick (three-round) and full sessions; all supplied scenario families.
+- Direct launchers for each game, with multiplayer hosting and solo practice. Choose all three or one game; quick sessions use one round per selected game, while full sessions use all its scenarios.
 - Guess Who Said It (1 point per correct response), Read the Room / Prediction Markets (2 points), and Beneath the Surface / Scenario Triage (3 points). Tied top responses count.
 - Top-choice charts and average rankings, facilitator reflection prompts, passing, and anonymous group scores.
 - Consent-based closing letter, revocation, link sharing and plain-text download.

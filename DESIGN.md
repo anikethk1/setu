@@ -153,3 +153,7 @@ Controls and navigation use soft rectangular corners; form and game panels are s
 - **Don’t** use decorative shadows on every operating panel.
 - **Don’t** let the collapsed mobile navigation receive focus.
 - **Don’t** replace the SVG bridge with a raster approximation.
+
+## Game launchers
+
+Home game introductions are actionable: each opens a launcher with that game selected. The launcher inherits the existing centered form, select, session-length choices, and primary button. Multiplayer hosting is primary; a separated solo-practice action explains its example players. The general host entry defaults to all three games. Help and Meet the games remain explicit instruction links. The lobby names the selected game.

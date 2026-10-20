@@ -1,11 +1,11 @@
-import {guessPrompts,predictions,triages,choicesFor,type Prompt,type Role} from './content';
+import {guessPrompts,predictions,triages,choicesFor,type Prompt,type Role,type SessionMode} from './content';
 export type Quiz={field:string;dream:string;current:string;interests:string[];factor:string;sensitive:boolean;support:number};
 export type Player={token:string;role:Role;quiz:Quiz|null;score:number;correct:number;attempts:number};
 export type Answer={own?:string|number;prediction?:number;ranking?:number[];votes?:Role[];skip?:boolean};
 export type Round={prompt:Prompt;answers:Record<string,Answer>;samples:{id:string;text:string;role:Role}[];deadline:number;scored:boolean};
 export type Line={id:string;token:string;text:string;approved:boolean};
-export type Room={code:string;host:string;created:number;expires:number;status:'lobby'|'playing'|'letter';phase:'answer'|'guess'|'reveal';quick:boolean;players:Player[];plan:Prompt[];index:number;rounds:Round[];lines:Line[]};
-export function makeRoom(code:string,host:string,quick=true):Room {return {code,host,created:Date.now(),expires:Date.now()+86400000,status:'lobby',phase:'answer',quick,players:[],plan:[],index:0,rounds:[],lines:[]}}
+export type Room={code:string;host:string;created:number;expires:number;status:'lobby'|'playing'|'letter';phase:'answer'|'guess'|'reveal';quick:boolean;mode?:SessionMode;players:Player[];plan:Prompt[];index:number;rounds:Round[];lines:Line[]};
+export function makeRoom(code:string,host:string,quick=true,mode:SessionMode='all'):Room {return {code,host,mode,created:Date.now(),expires:Date.now()+86400000,status:'lobby',phase:'answer',quick,players:[],plan:[],index:0,rounds:[],lines:[]}}
 export const uid=()=>crypto.randomUUID();
 export function newPlayer(token:string,role:Role):Player{return {token,role,quiz:null,score:0,correct:0,attempts:0}}
 function common(r:Room,key:'dream'|'current'){const vals=r.players.filter(p=>p.role==='student'&&p.quiz).map(p=>p.quiz![key]).filter(v=>v&&v!=='Undecided');return vals.sort((a,b)=>vals.filter(v=>v===b).length-vals.filter(v=>v===a).length)[0]|| (key==='dream'?'arts, design, or media':'engineering or technology')}
@@ -15,7 +15,7 @@ export function advance(r:Room){
  if(r.status==='lobby'){
   const ready=r.players.filter(p=>p.quiz);if(ready.length<2||!ready.some(p=>p.role==='student')||!ready.some(p=>p.role==='parent'))throw Error('You need at least one ready student and one ready parent to begin.');
   r.players=ready;const mental=ready.every(p=>p.quiz?.sensitive);const pp=predictions.filter(p=>!p.sensitive||mental);
-  r.plan=(r.quick?[guessPrompts[0],pp[0],triages[1]]:[...guessPrompts,...pp,...triages]).map(p=>({...p,text:p.text.replace('{dream}',common(r,'dream').toLowerCase()).replace('{current}',common(r,'current').toLowerCase())}));r.status='playing';beginRound(r);return;
+  r.plan=(r.quick?[guessPrompts[0],pp[0],triages[1]]:[...guessPrompts,...pp,...triages]).filter(p=>!r.mode||r.mode==='all'||p.game===r.mode).map(p=>({...p,text:p.text.replace('{dream}',common(r,'dream').toLowerCase()).replace('{current}',common(r,'current').toLowerCase())}));r.status='playing';beginRound(r);return;
  }
  if(r.status!=='playing')return;
  const round=r.rounds[r.index];
@@ -76,7 +76,7 @@ export function snapshot(r:Room,token='',host='',letterOnly=false){
  const answered=round?r.players.filter(p=>r.phase==='guess'?round.answers[p.token]?.votes||round.answers[p.token]?.skip:round.answers[p.token]).length:0;
  const approved=r.lines.filter(l=>l.approved).map(l=>({id:l.id,text:l.text}));
  if(letterOnly)return {code:r.code,status:r.status,lines:r.status==='letter'?approved:[],expires:r.expires};
- return {code:r.code,expires:r.expires,status:r.status,phase:r.phase,quick:r.quick,isHost:host===r.host,index:r.index,total:r.plan.length,counts:{student:r.players.filter(p=>p.role==='student').length,parent:r.players.filter(p=>p.role==='parent').length,ready:r.players.filter(p=>p.quiz).length,total:r.players.length},self:self?{role:self.role,ready:!!self.quiz,score:self.score,correct:self.correct,attempts:self.attempts,answer:round?.answers[token],lines:r.lines.filter(l=>l.token===token).map(({id,text,approved})=>({id,text,approved}))}:null,
+ return {code:r.code,expires:r.expires,status:r.status,phase:r.phase,quick:r.quick,mode:r.mode||'all',isHost:host===r.host,index:r.index,total:r.plan.length,counts:{student:r.players.filter(p=>p.role==='student').length,parent:r.players.filter(p=>p.role==='parent').length,ready:r.players.filter(p=>p.quiz).length,total:r.players.length},self:self?{role:self.role,ready:!!self.quiz,score:self.score,correct:self.correct,attempts:self.attempts,answer:round?.answers[token],lines:r.lines.filter(l=>l.token===token).map(({id,text,approved})=>({id,text,approved}))}:null,
  round:round?{prompt:round.prompt,deadline:round.deadline,answered,samples:round.samples.map(s=>({text:s.text,...reveal?{role:s.role}:{}})),...reveal?{student,parent}:{} }:null,
  scores:['student','parent'].map(role=>({role,score:r.players.filter(p=>p.role===role).reduce((n,p)=>n+p.score,0),correct:r.players.filter(p=>p.role===role).reduce((n,p)=>n+p.correct,0),attempts:r.players.filter(p=>p.role===role).reduce((n,p)=>n+p.attempts,0)})),lines:approved};
 }
