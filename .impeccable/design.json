@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T03:53:40.832470+00:00",
+  "title": "Design System: Setu",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0082 91.48)",
+          "oklch(26.4% 0.0082 91.48)",
+          "oklch(37.9% 0.0082 91.48)",
+          "oklch(49.3% 0.0082 91.48)",
+          "oklch(60.7% 0.0082 91.48)",
+          "oklch(72.1% 0.0082 91.48)",
+          "oklch(83.6% 0.0082 91.48)",
+          "oklch(95% 0.0082 91.48)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0153 101.96)",
+          "oklch(26.4% 0.0153 101.96)",
+          "oklch(37.9% 0.0153 101.96)",
+          "oklch(49.3% 0.0153 101.96)",
+          "oklch(60.7% 0.0153 101.96)",
+          "oklch(72.1% 0.0153 101.96)",
+          "oklch(83.6% 0.0153 101.96)",
+          "oklch(95% 0.0153 101.96)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0168 98.48)",
+          "oklch(26.4% 0.0168 98.48)",
+          "oklch(37.9% 0.0168 98.48)",
+          "oklch(49.3% 0.0168 98.48)",
+          "oklch(60.7% 0.0168 98.48)",
+          "oklch(72.1% 0.0168 98.48)",
+          "oklch(83.6% 0.0168 98.48)",
+          "oklch(95% 0.0168 98.48)"
+        ]
+      },
+      "wine": {
+        "role": "primary",
+        "displayName": "Wine",
+        "tonalRamp": [
+          "oklch(15% 0.0752 1.04)",
+          "oklch(26.4% 0.0752 1.04)",
+          "oklch(37.9% 0.0752 1.04)",
+          "oklch(49.3% 0.0752 1.04)",
+          "oklch(60.7% 0.0752 1.04)",
+          "oklch(72.1% 0.0752 1.04)",
+          "oklch(83.6% 0.0752 1.04)",
+          "oklch(95% 0.0752 1.04)"
+        ]
+      },
+      "terra": {
+        "role": "primary",
+        "displayName": "Terra",
+        "tonalRamp": [
+          "oklch(15% 0.1353 35.84)",
+          "oklch(26.4% 0.1353 35.84)",
+          "oklch(37.9% 0.1353 35.84)",
+          "oklch(49.3% 0.1353 35.84)",
+          "oklch(60.7% 0.1353 35.84)",
+          "oklch(72.1% 0.1353 35.84)",
+          "oklch(83.6% 0.1353 35.84)",
+          "oklch(95% 0.1353 35.84)"
+        ]
+      },
+      "lavender": {
+        "role": "secondary",
+        "displayName": "Lavender",
+        "tonalRamp": [
+          "oklch(15% 0.0211 304.02)",
+          "oklch(26.4% 0.0211 304.02)",
+          "oklch(37.9% 0.0211 304.02)",
+          "oklch(49.3% 0.0211 304.02)",
+          "oklch(60.7% 0.0211 304.02)",
+          "oklch(72.1% 0.0211 304.02)",
+          "oklch(83.6% 0.0211 304.02)",
+          "oklch(95% 0.0211 304.02)"
+        ]
+      },
+      "purple": {
+        "role": "secondary",
+        "displayName": "Purple",
+        "tonalRamp": [
+          "oklch(15% 0.0621 306.40)",
+          "oklch(26.4% 0.0621 306.40)",
+          "oklch(37.9% 0.0621 306.40)",
+          "oklch(49.3% 0.0621 306.40)",
+          "oklch(60.7% 0.0621 306.40)",
+          "oklch(72.1% 0.0621 306.40)",
+          "oklch(83.6% 0.0621 306.40)",
+          "oklch(95% 0.0621 306.40)"
+        ]
+      },
+      "sage": {
+        "role": "secondary",
+        "displayName": "Sage",
+        "tonalRamp": [
+          "oklch(15% 0.0217 118.24)",
+          "oklch(26.4% 0.0217 118.24)",
+          "oklch(37.9% 0.0217 118.24)",
+          "oklch(49.3% 0.0217 118.24)",
+          "oklch(60.7% 0.0217 118.24)",
+          "oklch(72.1% 0.0217 118.24)",
+          "oklch(83.6% 0.0217 118.24)",
+          "oklch(95% 0.0217 118.24)"
+        ]
+      },
+      "green": {
+        "role": "secondary",
+        "displayName": "Green",
+        "tonalRamp": [
+          "oklch(15% 0.0569 134.52)",
+          "oklch(26.4% 0.0569 134.52)",
+          "oklch(37.9% 0.0569 134.52)",
+          "oklch(49.3% 0.0569 134.52)",
+          "oklch(60.7% 0.0569 134.52)",
+          "oklch(72.1% 0.0569 134.52)",
+          "oklch(83.6% 0.0569 134.52)",
+          "oklch(95% 0.0569 134.52)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15% 0.0138 92.99)",
+          "oklch(26.4% 0.0138 92.99)",
+          "oklch(37.9% 0.0138 92.99)",
+          "oklch(49.3% 0.0138 92.99)",
+          "oklch(60.7% 0.0138 92.99)",
+          "oklch(72.1% 0.0138 92.99)",
+          "oklch(83.6% 0.0138 92.99)",
+          "oklch(95% 0.0138 92.99)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15% 0.0054 95.10)",
+          "oklch(26.4% 0.0054 95.10)",
+          "oklch(37.9% 0.0054 95.10)",
+          "oklch(49.3% 0.0054 95.10)",
+          "oklch(60.7% 0.0054 95.10)",
+          "oklch(72.1% 0.0054 95.10)",
+          "oklch(83.6% 0.0054 95.10)",
+          "oklch(95% 0.0054 95.10)"
+        ]
+      },
+      "action-text": {
+        "role": "neutral",
+        "displayName": "Action Text",
+        "tonalRamp": [
+          "oklch(15% 0.0069 88.64)",
+          "oklch(26.4% 0.0069 88.64)",
+          "oklch(37.9% 0.0069 88.64)",
+          "oklch(49.3% 0.0069 88.64)",
+          "oklch(60.7% 0.0069 88.64)",
+          "oklch(72.1% 0.0069 88.64)",
+          "oklch(83.6% 0.0069 88.64)",
+          "oklch(95% 0.0069 88.64)"
+        ]
+      },
+      "terra-hover": {
+        "role": "primary",
+        "displayName": "Terra Hover",
+        "tonalRamp": [
+          "oklch(15% 0.1206 35.57)",
+          "oklch(26.4% 0.1206 35.57)",
+          "oklch(37.9% 0.1206 35.57)",
+          "oklch(49.3% 0.1206 35.57)",
+          "oklch(60.7% 0.1206 35.57)",
+          "oklch(72.1% 0.1206 35.57)",
+          "oklch(83.6% 0.1206 35.57)",
+          "oklch(95% 0.1206 35.57)"
+        ]
+      }
+    },
+    "shadows": [
+      {
+        "name": "prompt-paper",
+        "value": "0 10px 22px #4a35490b",
+        "purpose": "Introductory lavender paper."
+      },
+      {
+        "name": "answer-paper",
+        "value": "0 13px 25px #664a3410",
+        "purpose": "Overlapping warm response slip."
+      },
+      {
+        "name": "letter",
+        "value": "0 15px 35px #664d3210",
+        "purpose": "Shared closing letter."
+      },
+      {
+        "name": "mobile-drawer",
+        "value": "10px 0 35px #3332",
+        "purpose": "Offcanvas navigation."
+      },
+      {
+        "name": "toast",
+        "value": "0 7px 25px #20201920",
+        "purpose": "Transient status feedback."
+      }
+    ],
+    "motion": [
+      {
+        "name": "action-hover",
+        "value": "background .18s",
+        "purpose": "Primary button hover."
+      },
+      {
+        "name": "entry-hover",
+        "value": "background .2s, transform .2s",
+        "purpose": "Entry-card tonal shift and 3px lift."
+      },
+      {
+        "name": "drawer",
+        "value": "transform .25s",
+        "purpose": "Mobile navigation reveal."
+      },
+      {
+        "name": "paper-arrive",
+        "value": "750ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Introductory prompt paper rises 12px into place; all motion is disabled for reduced-motion preferences."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "min-width: 1500px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "max-width: 1200px"
+      },
+      {
+        "name": "tablet",
+        "value": "761px\u20131000px"
+      },
+      {
+        "name": "mobile",
+        "value": "max-width: 760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "description": "Filled action used to submit or advance.",
+      "html": "<button class=\"ds-primary\">Send anonymously</button>",
+      "css": ".ds-primary{font-family:var(--sans,'DM Sans',sans-serif);border:0;cursor:pointer;min-height:46px;padding:13px 21px;border-radius:8px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:12px;transition:background .18s;background:var(--terra,#a9472d);color:#fffdf8}.ds-primary:hover{background:#913c26}.ds-primary:focus-visible{outline:3px solid var(--purple,#665479);outline-offset:4px}.ds-primary:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "description": "Quiet outlined action for letter download or navigation.",
+      "html": "<button class=\"ds-secondary\">Download</button>",
+      "css": ".ds-secondary{font-family:var(--sans,'DM Sans',sans-serif);border:0;cursor:pointer;min-height:46px;padding:13px 21px;border-radius:8px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:12px;transition:background .18s;background:transparent;border:1px solid #d3cbbf;color:var(--ink,#39382f)}.ds-secondary:hover{background:#efebe3}.ds-secondary:focus-visible{outline:3px solid var(--purple,#665479);outline-offset:4px}",
+      "refersTo": "button-secondary"
+    },
+    {
+      "name": "Text action",
+      "kind": "button",
+      "description": "Wine text action with compact spacing.",
+      "html": "<button class=\"ds-text\">Take a little test drive <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
+      "css": ".ds-text{font-family:var(--sans,'DM Sans',sans-serif);display:inline-flex;align-items:center;gap:9px;border:0;background:none;color:var(--wine,#713d4d);padding:4px 0;font-size:12px;font-weight:600;cursor:pointer}.ds-text:hover{color:var(--terra,#a9472d)}.ds-text:focus-visible{outline:3px solid var(--purple,#665479);outline-offset:4px}"
+    },
+    {
+      "name": "Room code",
+      "kind": "input",
+      "description": "Centered uppercase code entry.",
+      "html": "<label class=\"ds-label\" for=\"ds-code\">Room code</label><input id=\"ds-code\" class=\"ds-code\" placeholder=\"ABC123\" maxlength=\"6\"/>",
+      "css": ".ds-label{font-family:var(--sans,'DM Sans',sans-serif);display:block;font-size:12px;font-weight:600;margin-bottom:9px;color:var(--ink,#39382f)}.ds-code{font-family:var(--sans,'DM Sans',sans-serif);width:100%;max-width:320px;font-size:32px;text-align:center;letter-spacing:.2em;padding:16px;border:1px solid #cfc7b9;border-radius:8px;text-transform:uppercase;background:#fffdf9;color:var(--wine,#713d4d);caret-color:var(--wine,#713d4d)}.ds-code::placeholder{color:#786c6b}.ds-code:focus-visible{outline:3px solid var(--purple,#665479);outline-offset:4px}",
+      "refersTo": "input-code"
+    },
+    {
+      "name": "Navigation row",
+      "kind": "nav",
+      "description": "Active gathering-place navigation.",
+      "html": "<nav aria-label=\"Example navigation\"><button class=\"ds-nav\" aria-current=\"page\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-8H9v8H4a1 1 0 0 1-1-1z\"/></svg>The gathering place</button></nav>",
+      "css": ".ds-nav{font-family:var(--sans,'DM Sans',sans-serif);display:flex;align-items:center;gap:12px;text-align:left;font-size:13px;padding:13px 12px;border:0;border-radius:8px;background:#eae4e4;color:var(--wine,#713d4d);font-weight:600;cursor:pointer}.ds-nav:hover{background:#ece9e1}.ds-nav:focus-visible{outline:3px solid var(--purple,#665479);outline-offset:4px}"
+    },
+    {
+      "name": "Selected chip",
+      "kind": "chip",
+      "description": "Compact personalization choice.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"true\">Family expectations <span aria-hidden=\"true\">\u2713</span></button>",
+      "css": ".ds-chip{font-family:var(--sans,'DM Sans',sans-serif);padding:9px 12px;border:1px solid #a58aa9;border-radius:6px;font-size:11px;display:flex;align-items:center;gap:7px;background:#efe6f0;color:#65426d;cursor:pointer}.ds-chip:focus-visible{outline:3px solid var(--purple,#665479);outline-offset:4px}"
+    },
+    {
+      "name": "Host entry card",
+      "kind": "card",
+      "description": "Wide warm card used to open a room.",
+      "html": "<button class=\"ds-entry\"><span class=\"ds-entry-icon\" aria-hidden=\"true\">\uff0b</span><span><strong>Bring people together</strong><small>Start a room and invite your group.</small></span><span class=\"ds-entry-arrow\" aria-hidden=\"true\">\u2192</span></button>",
+      "css": ".ds-entry{font-family:var(--sans,'DM Sans',sans-serif);width:100%;padding:25px 23px;border:1px solid #ded4cb;border-radius:12px;display:flex;align-items:center;gap:15px;text-align:left;min-height:115px;background:#f9ede2;color:var(--ink,#39382f);cursor:pointer;transition:background .2s,transform .2s}.ds-entry:hover{transform:translateY(-3px);background:#f4e1d1}.ds-entry strong{display:block;font-size:15px;font-weight:600;margin-bottom:6px}.ds-entry small{display:block;color:#706252;font-size:11px}.ds-entry-icon{height:43px;width:43px;display:grid;place-items:center;background:#eed9c6;color:#874b31;border-radius:50%;font-size:24px;flex-shrink:0}.ds-entry-arrow{margin-left:auto;color:#8b624b}.ds-entry:focus-visible{outline:3px solid var(--purple,#665479);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-entry{transition:none}}"
+    },
+    {
+      "name": "Game question",
+      "kind": "card",
+      "description": "Dominant prompt surface above the current task.",
+      "html": "<section class=\"ds-question\"><span>Guess who said it \u00b7 Round 1</span><h2>What\u2019s something you wish they understood?</h2><small>No perfect answers. Just your perspective.</small></section>",
+      "css": ".ds-question{font-family:var(--sans,'DM Sans',sans-serif);border-radius:12px;padding:26px 28px;background:var(--lavender,#eae4f3);color:#574366}.ds-question>span{font-size:11px}.ds-question h2{font-family:var(--display,\"DM Serif Display\",Georgia,serif);font-size:clamp(27px,2.5vw,37px);line-height:1.22;font-weight:400;letter-spacing:-.025em;margin:24px 0 25px}.ds-question small{font-size:10px;opacity:.85}",
+      "refersTo": "question-card"
+    },
+    {
+      "name": "Closing letter",
+      "kind": "custom",
+      "description": "Paper artifact containing consented shared words.",
+      "html": "<article class=\"ds-letter\"><h2>To the person<br>on the other side,</h2><p>Our letter is waiting for its first words.</p><div>With a little more understanding,<br><strong>All of us.</strong></div><span class=\"ds-watermark\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 44 44\" fill=\"none\" aria-hidden=\"true\"><path d=\"M7 33V22a15 15 0 0 1 30 0v11M7 24h30M15 33v-9m14 9v-9\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/></svg>setu.</span></article>",
+      "css": ".ds-letter{font-family:var(--sans,'DM Sans',sans-serif);background:#f2e8d9;padding:38px 35px 28px;border-radius:3px;color:#604a3c;box-shadow:0 15px 35px #664d3210;max-width:440px}.ds-letter h2{font-family:var(--display,\"DM Serif Display\",Georgia,serif);font-size:33px;font-weight:400;line-height:1.2;margin:0 0 30px}.ds-letter p{font-family:var(--display,\"DM Serif Display\",Georgia,serif);font-size:22px;line-height:1.4;margin:0 0 30px}.ds-letter>div{border-top:1px solid #dbcab7;padding-top:23px;font-size:12px;line-height:1.9}.ds-letter strong{font-family:var(--display,\"DM Serif Display\",Georgia,serif);font-size:21px;font-weight:400}.ds-watermark{display:flex;align-items:center;justify-content:flex-end;gap:3px;color:#98735c;font-weight:600;letter-spacing:-.02em;font-size:20px;margin-top:22px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Community game-night print materials",
+    "overview": "Warm community game-night print materials become a calm operating interface. Cream ground, wine ink accents, colored prompt paper, and an exact SVG bridge give the product a welcoming, handmade character without raster decoration.\n\nDisplay serif type carries invitations, prompts, and shared words. Compact sans-serif controls carry the work. Most surfaces stay flat; overlapping introductory papers and the closing letter receive restrained shadows.",
+    "keyCharacteristics": [
+      "Cream ground and muted, distinct game colors.",
+      "Editorial serif language with practical sans-serif controls.",
+      "Soft rectangular controls, paper surfaces, and an SVG bridge."
+    ],
+    "rules": [],
+    "dos": [
+      "Do preserve visible purple keyboard focus and reduced-motion behavior.",
+      "Do pair game colors with written labels and icons.",
+      "Do keep shared letter approval controls distinct from the letter preview."
+    ],
+    "donts": [
+      "Don\u2019t use decorative shadows on every operating panel.",
+      "Don\u2019t let the collapsed mobile navigation receive focus.",
+      "Don\u2019t replace the SVG bridge with a raster approximation."
+    ]
+  }
+}
