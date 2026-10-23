@@ -12,8 +12,12 @@ const data=await api.json();
 assert(data.error?.includes('Room not found or expired'),'The multiplayer database is unavailable.');
 if(prod){
  assert.equal(new URL(response.url).protocol,'https:','Production must use HTTPS.');
- const version=await fetch(new URL('/version.json?check='+Date.now(),url),{signal:AbortSignal.timeout(20000)}).then(r=>r.ok?r.json():null);
- if(version)console.log('Production commit:',version.commit,'Built:',version.builtAt);
+ const versionResponse=await fetch(new URL('/version.json?check='+Date.now(),url),{signal:AbortSignal.timeout(20000)});
+ assert.equal(versionResponse.status,200,'The production release identity is missing.');
+ const version=await versionResponse.json();
+ assert(/^[a-f0-9]{40}$/.test(version.commit),'The production commit must identify a Git release.');
+ assert(Number.isFinite(Date.parse(version.builtAt)),'The production build time is invalid.');
+ console.log('Production commit:',version.commit,'Built:',version.builtAt);
  const redirect=await fetch('http://setu.anikethkalagara.com/',{redirect:'manual',signal:AbortSignal.timeout(20000)});
  assert([301,302,307,308].includes(redirect.status)&&redirect.headers.get('location')?.startsWith('https://setu.anikethkalagara.com'),'HTTP must redirect to HTTPS.');
 }

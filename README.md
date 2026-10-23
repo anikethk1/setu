@@ -6,7 +6,6 @@ Setu is an anonymous conversation game for students and parents. You can play wi
 
 **Source code:** [github.com/anikethk1/setu](https://github.com/anikethk1/setu)
 
-> **Hosting setup status:** The source and GitHub checks are ready. Automatic production deployment is awaiting approval to create a Cloudflare build token and finish connecting the domain to this repository. Until that setup is completed, pushing to `main` does **not** update the public site. The release steps below describe the completed workflow.
 
 This guide is written for someone who is learning or using an AI coding assistant. You do not need a Cloudflare account, database password, or ChatGPT login to run Setu on your own computer.
 
@@ -198,7 +197,7 @@ You can also run this **read-only** production check from your local folder:
 npm run test:production
 ```
 
-It checks the public homepage, anonymous access, the database connection, a trusted HTTPS connection, and the HTTP-to-HTTPS redirect. It also prints the deployed Git commit when available, so you can compare it with the commit on GitHub or Cloudflare. It does not create a production game room.
+It checks the public homepage, anonymous access, the database connection, a trusted HTTPS connection, and the HTTP-to-HTTPS redirect. It also prints the deployed Git commit, so you can compare it with the commit on GitHub or Cloudflare. It does not create a production game room.
 
 ## Common problems
 

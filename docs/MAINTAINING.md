@@ -2,7 +2,6 @@
 
 The beginner workflow is in the root README. This page is for the person maintaining Cloudflare or working with an AI assistant on backend changes.
 
-> **Setup pending:** The production D1 database has been created, and GitHub checks pass. Cloudflare Worker creation/build authentication and domain cutover are awaiting deployment-token approval. The custom domain still serves the original Sites deployment. The settings below are the prepared target configuration, not a verified active deployment.
 
 ## Deployment ownership
 
@@ -15,6 +14,8 @@ The beginner workflow is in the root README. This page is for the person maintai
 - Source configuration: `wrangler.json`; generated deploy configuration: `dist/server/wrangler.json`.
 
 These IDs identify resources; they are not authentication secrets. Normal local development uses an isolated emulated D1 database in `.wrangler/state`, even though the configuration also names production resources. `--local` is explicit in the development migration script. Production migrations require Cloudflare authentication and explicit `npm run deploy`.
+
+The production custom domain is attached to the `setu` Worker in Cloudflare. Domain routing is managed in the dashboard and persists across code deployments; normal releases do not need DNS or route-edit permissions. The previous CNAME is retained as `setu-sites-backup.anikethkalagara.com` for reference, pointing to `custom-domains.chatgpt.site`. It is a DNS rollback reference, not a supported public app URL. The apex domain still points to `personal-website`.
 
 The original app was hosted via Sites. `.openai/hosting.json` retains that old project's identity for reference. Normal GitHub releases use the Worker above, not the old Sites publishing tools. The original Sites URL remains a fallback; its database is independent of this Worker's database. Before the hosting handoff, the old database was checked and had no unexpired rooms.
 
@@ -29,6 +30,8 @@ The original app was hosted via Sites. `.openai/hosting.json` retains that old p
 - Preview/non-production branch builds: disabled until a separate preview database is configured.
 
 The build must succeed before deployment. `deploy.mjs` applies pending D1 migrations to the named database, then publishes the generated Worker and assets. It stops immediately if either step fails. Keep the generated config rather than deploying the TypeScript Worker entrypoint without the Vite/Vinext build.
+
+The native build token is named `setu GitHub builds`. It is scoped to this Cloudflare account with Workers Scripts edit, D1 edit, Artifacts read/edit, and Account Settings read; unrelated service, zone, and user permissions were removed. The dashboard supports these account-level permissions rather than limiting this legacy token to one Worker, so keep repository write access limited to trusted maintainers. No token value is committed or stored in GitHub.
 
 The GitHub Actions workflow also checks and builds pushes and pull requests. It has read-only repository permissions and no Cloudflare secrets. Cloudflare's Git integration handles deployment authentication in Cloudflare, outside this repository.
 
