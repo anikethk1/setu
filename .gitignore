@@ -54,3 +54,8 @@ next-env.d.ts
 /.codex/
 /outputs/
 /work/
+
+# Generated build information and local credentials
+*.tsbuildinfo
+/.dev.vars*
+/public/version.json

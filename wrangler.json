@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "setu",
+  "account_id": "e2230f8a9895031d4d99d79403b125c6",
+  "main": "./build/sites-worker.ts",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "observability": {"enabled": true},
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "setu-production",
+    "database_id": "158140c4-513f-411e-ae0f-55b3f44dd60b",
+    "migrations_dir": "./drizzle"
+  }]
+}
