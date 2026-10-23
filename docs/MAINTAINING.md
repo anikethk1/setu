@@ -2,6 +2,8 @@
 
 The beginner workflow is in the root README. This page is for the person maintaining Cloudflare or working with an AI assistant on backend changes.
 
+> **Setup pending:** The production D1 database has been created, and GitHub checks pass. Cloudflare Worker creation/build authentication and domain cutover are awaiting deployment-token approval. The custom domain still serves the original Sites deployment. The settings below are the prepared target configuration, not a verified active deployment.
+
 ## Deployment ownership
 
 - GitHub repository: `anikethk1/setu`; production branch: `main`.

@@ -6,6 +6,8 @@ Setu is an anonymous conversation game for students and parents. You can play wi
 
 **Source code:** [github.com/anikethk1/setu](https://github.com/anikethk1/setu)
 
+> **Hosting setup status:** The source and GitHub checks are ready. Automatic production deployment is awaiting approval to create a Cloudflare build token and finish connecting the domain to this repository. Until that setup is completed, pushing to `main` does **not** update the public site. The release steps below describe the completed workflow.
+
 This guide is written for someone who is learning or using an AI coding assistant. You do not need a Cloudflare account, database password, or ChatGPT login to run Setu on your own computer.
 
 ## 1. Install the two tools you need
